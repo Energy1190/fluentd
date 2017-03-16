@@ -6,7 +6,7 @@ RUN apk update \
     && apk add --no-cache ca-certificates ruby ruby-irb \
     && apk add --no-cache --virtual .build-deps build-base ruby-dev \
     && fluent-gem install fluent-plugin-mongo \
-    && fluent-gem install fluent-plugin-systemd
+    && gem install fluent-plugin-systemd -v 0.2.0
 
 USER fluent
 WORKDIR /home/fluent
