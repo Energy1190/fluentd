@@ -4,7 +4,7 @@ USER root
 RUN apk update \
     && apk upgrade \
     && apk add --no-cache ca-certificates ruby ruby-irb \
-    && apk add --no-cache --virtual .build-deps build-base ruby-dev curl-dev \
+    && apk add --no-cache --virtual .build-deps build-base ruby-dev curl-dev libffi-dev \
     && fluent-gem install fluent-plugin-mongo \
     && gem install fluent-plugin-systemd -v 0.2.0
 
