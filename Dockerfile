@@ -13,5 +13,5 @@ WORKDIR /home/fluent
 
 EXPOSE 24224 5140
 
-CMD exec fluentd -c /fluentd/etc/$FLUENTD_CONF -p /fluentd/plugins $FLUENTD_OPT --log-rotate-age $FLUENTD_AGE --log-rotate-size $FLUENTD_SIZE
+CMD exec fluentd -c /fluentd/etc/$FLUENTD_CONF -p /fluentd/plugins $FLUENTD_OPT
 
